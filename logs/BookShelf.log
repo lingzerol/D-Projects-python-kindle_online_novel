@@ -1,0 +1,9 @@
+2021-02-28 20:03:44,716 - bookshelf.py[line:295] - ERROR: Malformed attribute selector at position 2
+  line 1:
+dd[>9]
+  ^
+2021-02-28 20:03:55,425 - bookshelf.py[line:295] - ERROR: Malformed attribute selector at position 2
+  line 1:
+dd[>9]
+  ^
+2021-02-28 20:04:15,458 - bookshelf.py[line:295] - ERROR: 'list' object has no attribute 'select'

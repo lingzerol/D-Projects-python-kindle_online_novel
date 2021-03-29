@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MyKindle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/align.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/utils/jquery.min.js') }}"></script>
+    <!-- <script type="text/javascript" src="../static/js/utils/jquery.min.js"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/cookie.js') }}"></script>
+    <script type="text/javascript">
+        // check_cookie()
+    </script>
+    <style type="text/css">
+        #footer {
+            background: white;
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 2px;
+            /* padding: 0px; */
+        }
+
+        #footer_container {
+            border-width: 2px;
+            border-style: solid;
+            width: 100%;
+            height: 100%;
+        }
+
+        .left_buttom {
+            border-right: 2px;
+            border-left: 0px;
+            border-top: 0px;
+            border-bottom: 0px;
+            border-style: solid;
+            background: white;
+            height: 100%;
+            width: 50px;
+            float: left;
+        }
+
+        .right_buttom {
+            border-right: 0px;
+            border-left: 2px;
+            border-top: 0px;
+            border-bottom: 0px;
+            border-style: solid;
+            background: white;
+            height: 100%;
+            width: 60px;
+            float: right;
+        }
+
+        #main_container {
+            background: white;
+            width: 100%;
+            height: calc(100% - 50px);
+            position: absolute;
+            top: 0;
+        }
+
+        .menu_layout {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            bottom: 50px;
+            z-index: 9999;
+            height: 100%;
+            margin-bottom: 2px;
+            /* visibility: hidden; */
+        }
+
+        #menu {
+            font-size: 20px;
+            font-weight: normal;
+            border-width: 2px;
+            border-style: solid;
+            width: 100px;
+            background: white;
+            _height: 0px;
+            min-height: 0px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+        }
+
+        #setting {
+            font-size: 20px;
+            font-weight: normal;
+            border-width: 2px;
+            border-style: solid;
+            width: 100px;
+            background: white;
+            _height: 0px;
+            min-height: 0px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            visibility: hidden;
+        }
+
+        /* 
+        .menu_center {
+            height: 100%;
+            background: #000000;
+            opacity: 0;
+            margin: auto;
+        } */
+
+        #next_page {
+            border-left: 0px;
+            width: 50%;
+        }
+
+        #previous_page {
+            width: 50%;
+        }
+
+        #menu_button {
+            width: 60px;
+        }
+
+        #setting_button {
+            width: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="height: 100%; width: 100%;">
+        <div id="main_container">
+
+        </div>
+        <script type="text/javascript">
+            $("#main_container").load("shelf", function (response, status, xhr) {
+            });
+        </script>
+
+        <div class="menu_layout">
+            <div class="center" id="menu">
+            </div>
+            <script type="text/javascript">
+                $("#menu").load("menu", function (response, status, xhr) {
+                });
+            </script>
+            <div class="center" id="setting">
+                <dl>
+                    <dt>test</dt>
+                    <dt>Milk</dt>
+                    <dt>Coffee</dt>
+                    <dt>Milk</dt>
+                    <dt>Coffee</dt>
+                    <dt>Milk</dt>
+                    <dt>Coffee</dt>
+                    <dt>Milk</dt>
+                </dl>
+            </div>
+            <!-- <div class="menu_center">
+                中间
+            </div> -->
+        </div>
+        <div class="middle" id="footer">
+            <div class="middle" id="footer_container">
+                <div class="middle left_buttom" id="menu_button" onclick="open_menu()">
+                    <div class="center">
+                        <img src="{{ url_for('static', filename = 'images/menu_icon.svg') }}" alt="Menu">
+                    </div>
+                </div>
+                <div class="middle left_buttom" id="previous_page" onclick="prev()">
+                    <div class="center">
+                        <img src="{{ url_for('static', filename = 'images/up_icon.svg') }}" alt="Menu">
+                    </div>
+                </div>
+                <div class="middle right_buttom" id="next_page" onclick="next()">
+                    <div class="center">
+                        <img src="{{ url_for('static', filename = 'images/down_icon.svg') }}" alt="Menu">
+                    </div>
+                </div>
+                <div class="middle right_buttom" id="setting_button" onclick="open_setting()">
+                    <div class="center">
+                        <img src="{{ url_for('static', filename = 'images/setting_icon.png') }}" alt="Menu">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    menu_state = false;
+    setting_state = false;
+    function open_menu() {
+        if (!menu_state) {
+            document.getElementById("menu").style.visibility = "visible";
+            menu_state = true;
+        } else {
+            document.getElementById("menu").style.visibility = "hidden";
+            menu_state = false;
+        }
+    }
+    function open_setting() {
+        if (!setting_state) {
+            document.getElementById("setting").style.visibility = "visible";
+            setting_state = true;
+        } else {
+            document.getElementById("setting").style.visibility = "hidden";
+            setting_state = false;
+        }
+    }
+</script>
+
+</html>

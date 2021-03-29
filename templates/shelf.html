@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/align.css') }}">
+
+<style type="text/css">
+    #shelf_container {
+        height: 100%;
+        width: 100%;
+    }
+
+    #search_area {
+        width: 100%;
+        height: 50px;
+        background-color: yellow;
+    }
+
+
+    #search_inner_area {
+        width: 100%;
+        height: 30px;
+        background-color: rgb(8, 74, 90);
+    }
+
+    #search_container {
+        width: 240px;
+        height: 20px;
+        padding: 0;
+        background-color: red;
+    }
+
+    /* #search_input_container {
+        position: absolute;
+        left: 0;
+        background-color: blue;
+    }
+
+    #search_button_container {
+        position: absolute;
+        right: 0;
+        background-color: green;
+    } */
+    #search_input {
+        width: 200px;
+        height: 20px;
+    }
+
+    #search_button {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+<div class="middle" id="search_area">
+    <div class="center" id="search_inner_area" align="center">
+        <input type="" name="" id="search_input">
+        <img src="{{ url_for('static', filename = 'images/search_icon.jpg') }}" alt="search_button" id="search_button">
+    </div>
+</div>
+<div class="middle" id="shelf_container">
+    <div class="center" id="shelf">
+        <dl>
+            <dt>test</dt>
+        </dl>
+    </div>
+</div>

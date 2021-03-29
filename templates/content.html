@@ -1,0 +1,101 @@
+<style type="text/css">
+    .header {
+        font-size: 10px;
+        font-weight: bold;
+        color: gray;
+        min-height: 0px;
+        word-wrap: break-word;
+        overflow: hidden;
+        padding-top: 1px;
+        padding-left: 5px;
+        line-height: 30px;
+        white-space: normal;
+        outline: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        /* width: 100%; */
+        /* height: auto; */
+    }
+
+    #title {
+        position: absolute;
+        right: 0;
+    }
+
+    #name {
+        position: absolute;
+        left: 0;
+    }
+
+    #content_container_box {
+        height: 100%;
+        width: 100%;
+        /* background-color: green; */
+        z-index: 99999;
+    }
+
+    #content_container {
+        width: calc(100% - 40px);
+        height: calc(100% - 70px);
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #content {
+        font-size: 20px;
+        font-weight: normal;
+        word-wrap: break-word;
+        overflow: hidden;
+        line-height: 30px;
+        white-space: pre-line;
+        outline: 0;
+        height: calc(100% - 40px);
+        width: calc(100% - 40px);
+        display: inline-block;
+        letter-spacing: 1px;
+        font-family: "STSong";
+    }
+
+    #page_info {
+        font-size: 10px;
+        font-weight: bold;
+        color: gray;
+        min-height: 0px;
+        word-wrap: break-word;
+        overflow: hidden;
+        padding-top: 1px;
+        padding-left: 5px;
+        line-height: 30px;
+        white-space: normal;
+        outline: 0;
+    }
+</style>
+
+<div class="header">
+    <div class="header" id="name">
+        我的世界
+    </div>
+    <div class="header" id="title">
+        第一张
+    </div>
+</div>
+<div class="center" id="content_container_box">
+    <div id="content_container">
+        <p id="content">
+
+        </p>
+        <div id="page_info">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/content.js') }}"></script>
+<script>
+    function next() {
+        content.next_page();
+    }
+    function prev() {
+        content.prev_page();
+    }
+</script>

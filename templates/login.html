@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MyKindle</title>
+    <style rel="stylesheet">
+        .button {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 50%;
+        }
+
+        .button_num {
+            margin-top: 3px;
+        }
+
+        .password_point {
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            border-color: black;
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 50%;
+        }
+
+        a:link,
+        a:visited {
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+    <!-- <script src="./js/login.js"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/utils/jsencrypt.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/utils/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/login.js') }}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script> -->
+    <script language="javascript">
+
+    </script>
+</head>
+
+<body align="center">
+    <div>
+        <div>
+            <p id="tips">please input your password:</p>
+        </div>
+        <div align="center" style="margin-top: 20px;">
+            <table style="border-collapse:separate; border-spacing:20px 0px;">
+                <tr>
+                    <th>
+                        <div class="password_point" id="0_password"></div>
+                    </th>
+                    <th>
+                        <div class="password_point" id="1_password"></div>
+                    </th>
+                    <th>
+                        <div class="password_point" id="2_password"></div>
+                    </th>
+                    <th>
+                        <div class="password_point" id="3_password"></div>
+                    </th>
+                    <th>
+                        <div class="password_point" id="4_password"></div>
+                    </th>
+                    <th>
+                        <div class="password_point" id="5_password"></div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div align="center" style="margin-top: 10px;font-size:40px;">
+            <table style="border-collapse:separate; border-spacing:10px 8px;">
+                <tr>
+                    <th>
+                        <a href="#" onclick="click_button(1)">
+                            <div class="button">
+                                <div class="button_num">1</div>
+                            </div>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" onclick="click_button(2)">
+                            <div class="button">
+                                <div class="button_num">2</div>
+                            </div>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" onclick="click_button(3)">
+                            <div class="button">
+                                <div class="button_num">3</div>
+                            </div>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="#" onclick="click_button(4)">
+                            <div class="button">
+                                <div class="button_num">4</div>
+                            </div>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" onclick="click_button(5)">
+                            <div class="button">
+                                <div class="button_num">5</div>
+                            </div>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" onclick="click_button(6)">
+                            <div class="button">
+                                <div class="button_num">6</div>
+                            </div>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="#" onclick="click_button(7)">
+                            <div class="button">
+                                <div class="button_num">7</div>
+                            </div>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" onclick="click_button(8)">
+                            <div class="button">
+                                <div class="button_num">8</div>
+                            </div>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" onclick="click_button(9)">
+                            <div class="button">
+                                <div class="button_num">9</div>
+                            </div>
+                        </a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="#" onclick="click_button(10)">
+                            <div class="button">c</div>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" onclick="click_button(0)">
+                            <div class="button">
+                                <div class="button_num">0</div>
+                            </div>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" onclick="click_button(11)">
+                            <div class="button">
+                                <div class="button_num">&larr;</div>
+                            </div>
+                        </a>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<style>
+    #menu_container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+</style>
+<div id="menu_container">
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/menu.js') }}"></script>
+<script>
+    var menu = new ContentMenu();
+    menu.set_menu();
+</script>

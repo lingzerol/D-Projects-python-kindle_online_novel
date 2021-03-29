@@ -14541,7 +14541,7 @@
     "ruleSearchLastChapter": "class.author.1@text#.*\\s*\\|\\s*",
     "ruleSearchList": "class.hot_sale",
     "ruleSearchName": "class.title@text",
-    "ruleSearchNoteUrl": "a@href",
+    "ruleSearchNoteUrl": "tag.a@href",
     "ruleSearchUrl": "/search.php@keyword=searchKey&t=1",
     "serialNumber": 0,
     "weight": 0
@@ -16259,7 +16259,7 @@
     "ruleBookName": "",
     "ruleChapterList": "tag.dd!0",
     "ruleChapterName": "tag.a@text",
-    "ruleChapterUrl": "",
+    "ruleChapterUrl": "tag.a@href",
     "ruleChapterUrlNext": "class.caption@text.下一页.0@href",
     "ruleContentUrl": "tag.a@href",
     "ruleContentUrlNext": "",
